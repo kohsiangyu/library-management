@@ -1,5 +1,5 @@
 <?php
-	$con=mysqli_connect("localhost","libmanager","pFJpjtbc7FWFaAYn");
+	$con=mysqli_connect("localhost","libmanager","pFJpjtbc7FWFaAYn","libmanage");
 
 	// Check connection
 	if (mysqli_connect_errno()){
