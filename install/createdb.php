@@ -1,8 +1,9 @@
 <?php
 	require_once("connectmysql.php");
+	require_once("create_script.php");
 
 	// Create database
-	$sql="CREATE DATABASE libmanage";
+	$sql=$newdb;
 
 	if (mysqli_query($con,$sql)){
 		echo "Database my_db created successfully";

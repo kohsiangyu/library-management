@@ -1,8 +1,9 @@
 <?php
 	require_once("connectdb.php");
+	require_once("create_script.php");
 
 	// Create database
-	$sql="CREATE TABLE users(ID CHAR(30) PRIMARY KEY, STUDENT_ID CHAR(30), SOCIAL_ID CHAR(30), NAME CHAR(30), EMAIL CHAR(100), BIRTH DATETIME, APPLICATION DATETIME)";
+	$sql=$newtable;
 
 	if (mysqli_query($con,$sql)){
 		echo "Table users created successfully";

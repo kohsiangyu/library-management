@@ -1,5 +1,7 @@
 <?php
-	$con=mysqli_connect("localhost","libmanager","pFJpjtbc7FWFaAYn","libmanage");
+	require_once("dbinfo.php");
+
+	$con=mysqli_connect($dbserver, $dbadmin, $dbpasswd, $dbname);
 
 	// Check connection
 	if (mysqli_connect_errno()){
