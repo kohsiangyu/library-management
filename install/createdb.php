@@ -1,5 +1,5 @@
 <?php
-	require_once("connectdb.php");
+	require_once("connectmysql.php");
 
 	// Create database
 	$sql="CREATE DATABASE libmanage";
