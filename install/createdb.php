@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","root","795223");
+$con=mysqli_connect("localhost","libmanager","pFJpjtbc7FWFaAYn");
 // Check connection
 if (mysqli_connect_errno())
   {
