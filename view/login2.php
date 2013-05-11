@@ -1,12 +1,16 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <?php
 ?>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
+		<!-- jquery 2.0.0 module -->
+		<script type="text/javascript" src="../thirdparty/jquery-2.0.0.js"></script>
+
 		<!-- bootstrap module -->
 		<link rel="stylesheet" type="text/css" href="../thirdparty/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../thirdparty/bootstrap/css/bootstrap-responsive.css" />
 		<script type="text/javascript" src="../thirdparty/bootstrap/js/bootstrap.js"></script>
 
 		<!-- Todo -->
