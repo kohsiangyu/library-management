@@ -1,0 +1,6 @@
+<?php
+	require_once("dbinfo.php");
+
+	$newdb		= "CREATE DATABASE ".$dbname;
+	$newtable	= "CREATE TABLE users(ID CHAR(30) PRIMARY KEY, STUDENT_ID CHAR(30), SOCIAL_ID CHAR(30), NAME CHAR(30), EMAIL CHAR(100), BIRTH DATETIME, APPLICATION DATETIME)";
+?>
