@@ -7,9 +7,11 @@
 
 		<!-- jquery 2.0.0 module -->
 		<script type="text/javascript" src="../thirdparty/jquery-2.0.0.js"></script>
+		<!-- <script type="text/javascript" src="./script.js"></script> -->
 
 		<!-- bootstrap module -->
 		<link rel="stylesheet" type="text/css" href="../thirdparty/bootstrap/css/bootstrap.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="./style.css" /> -->
 		<link rel="stylesheet" type="text/css" href="../thirdparty/bootstrap/css/bootstrap-responsive.css" />
 		<script type="text/javascript" src="../thirdparty/bootstrap/js/bootstrap.js"></script>
 
@@ -24,7 +26,7 @@
 				<h3>Have an Account?</h3>
 			</div>
 			<div class="modal-body">
-				<div class="well">
+				<div class="well well-large">
 					<ul class="nav nav-tabs">
 						<li class="active"><a href="#login" data-toggle="tab">Login</a></li>
 						<li><a href="#create" data-toggle="tab">Create Account</a></li>
@@ -69,9 +71,6 @@
 								<input type="text" value="" class="input-xlarge">
 								<label>Email</label>
 								<input type="text" value="" class="input-xlarge">
-								<label>Address</label>
-								<textarea value="Smith" rows="3" class="input-xlarge">
-								</textarea>
 								<div>
 									<button class="btn btn-primary">Create Account</button>
 								</div>
