@@ -2,5 +2,6 @@
 	require_once("dbinfo.php");
 
 	$newdb		= "CREATE DATABASE ".$dbname;
-	$newtable	= "CREATE TABLE users(ID CHAR(30) PRIMARY KEY, STUDENT_ID CHAR(30), SOCIAL_ID CHAR(30), NAME CHAR(30), EMAIL CHAR(100), BIRTH DATETIME, APPLICATION DATETIME)";
+	$newtable	= "CREATE TABLE $tablename[0]($tablefields[0])";
+	// echo json_encode($newtable)."<br/>";
 ?>

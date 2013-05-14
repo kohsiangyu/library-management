@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	//attach a jQuery live event to the button
-	$('#getdata-button').on('click', function(){
+	$('#personal').ready(function(){
 		$.ajax({
 			type: "GET",
-			url: 'json-data.php',
+			url: 'getPersonal.php',
 			async: false,
 			beforeSend: function(x){
 					if(x && x.overrideMimeType){
@@ -13,8 +13,13 @@ $(document).ready(function(){
 			dataType: "json",
 			success: function(data){
 				//alert(data); //uncomment this for debug
-				//alert (data.item1+" "+data.item2+" "+data.item3); //further debug
-				$('#showdata').html("<p>item1="+data.item1+" item2="+data.item2+" item3="+data.item3+"</p>");
+				$('#personal #ID').val(data.ID);
+				$('#personal #TYPE').val(data.TYPE);
+				$('#personal #STUDENT_ID').val(data.STUDENT_ID);
+				$('#personal #SOCIAL_ID').val(data.SOCIAL_ID);
+				$('#personal #NAME').val(data.NAME);
+				$('#personal #EMAIL').val(data.EMAIL);
+				$('#personal #BIRTH').val(data.BIRTH);
 			}
 		});
 	});

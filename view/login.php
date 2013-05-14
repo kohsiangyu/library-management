@@ -7,14 +7,8 @@
 		$_SESSION['pass']	= $_POST['password'];
 		//unset($_POST['username']);
 		//unset($_POST['password']);
-		echo "<meta http-equiv=REFRESH content=1;url=destroy.php>";
+		echo "<meta http-equiv='refresh' content='0;url=manage.php'>";
 	}
-	// echo($_SESSION['user'].";".$_SESSION['pass']);
-
-	// $_SESSION['test'] = $_POST['username'];
-	// if(isset($_SESSION['test'])) echo("test<br/>");
-
-	// session_destroy();
 ?>
 <html>
 	<head>
@@ -27,7 +21,7 @@
 		
 	</head>
 	<body>
-		<div class="" id="loginModal">
+		<div class="" id="ManageModal">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 				<h3>Have an Account?</h3>
@@ -40,7 +34,7 @@
 					</ul>
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane active in" id="login">
-							<form class="form-horizontal" action="login2.php" method="POST">
+							<form class="form-horizontal" action="login.php" method="POST">
 								<fieldset>
 									<div id="legend">
 										<legend class="">Login</legend>
