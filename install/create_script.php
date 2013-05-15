@@ -2,6 +2,9 @@
 	require_once("dbinfo.php");
 
 	$newdb		= "CREATE DATABASE ".$dbname;
-	$newtable	= "CREATE TABLE $tablename[0]($tablefields[0])";
+
+	for($i=0;$i<count($tablefields);$i++){
+		$newtable[$i]	= "CREATE TABLE $tablename[$i]($tablefields[$i])";
+	}
 	// echo json_encode($newtable)."<br/>";
 ?>
