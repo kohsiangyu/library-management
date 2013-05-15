@@ -27,15 +27,15 @@
 	<body>
 						<!-- Books
 						=============================================================== -->
-							<caption><p class="text-center">All my collections</p></caption>
+							<caption><p class="text-center">目前館藏</p></caption>
 							<table class="table table-striped table-condensed">
 								<thead>
 									<tr>
 										<th>#</th>
-										<th>Publisher</th>
-										<th>Book Name</th>
-										<th>Identity</th>
-										<th>Collection Dat.</th>
+										<th>出版社</th>
+										<th>書名</th>
+										<th>圖書編號</th>
+										<th>蒐藏日期</th>
 									</tr>
 								</thead>
 								<tbody>
