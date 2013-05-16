@@ -1,7 +1,18 @@
 <?php
+	session_start();	
+	require_once("examine.php");
+
+	$result = examine($_SESSION['user'], $_SESSION['pass']);
+	if(isset($result)){
+		$_SESSION['ID'] = $result['ID'];
+		unset($result);
+	}else{
+		echo "<meta http-equiv='refresh' content='0;url=login.php'>";
+		return;
+	}
+
 	require_once("connect.php");
 
-	session_start();
 	$id = $_SESSION['ID'];
 
 	// Initialize connection to mysql

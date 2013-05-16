@@ -63,6 +63,7 @@
 									<div class="control-group">
 										<!-- Push Data -->
 										<div class="controls">
+											<label class="checkbox"><input type="checkbox" name="sendnewbook" value="send" checked> Send Info Mail</label>
 											<button id="submit" name="submit" placeholder="" class="btn btn-primary">New</button>
 											<button id="clear" name="clear" placeholder="" class="btn btn-danger">Clear</button>
 										</div>

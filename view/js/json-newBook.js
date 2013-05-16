@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: "POST",
 			url: 'addnewbook.php',
-			async: false,
+			async: true,
 			beforeSend: function(x){
 					if(x && x.overrideMimeType){
 						x.overrideMimeType("application/j-son;charset=UTF-8");
@@ -18,7 +18,7 @@ $(document).ready(function(){
 				// alert(data); //uncomment this for debug
 				if(data == "success"){
 					$('#newbookform').after(
-						'<div class="alert alert-success span5">'+
+						'<div class="alert alert-success span6">'+
 						'<button type="button" class="close" data-dismiss="alert">&times;</button>'+
 						'<strong>Success!</strong>'+
 						'  Your book is now avaliable in the PolorLib'+
@@ -26,10 +26,10 @@ $(document).ready(function(){
 					);
 				}else if(data == "failure"){
 					$('#newbookform').after(
-						'<div class="alert alert-error span5">'+
+						'<div class="alert alert-error span6">'+
 						'<button type="button" class="close" data-dismiss="alert">&times;</button>'+
 						'<strong>Failure!</strong>'+
-						'  Your avaliable in the PolorLib'+
+						'  Something wrong happend!'+
 						'</div>'
 					);
 				}else{

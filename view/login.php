@@ -19,6 +19,7 @@
 		<style>
 			body{
 				padding-top: 30px;
+				background-image: url('./image/background_01.jpg');
 			}
 		</style>
 		<!-- <script src="json-submit.js" type="text/javascript"></script> -->

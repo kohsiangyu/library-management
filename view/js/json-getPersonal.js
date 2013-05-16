@@ -1,10 +1,10 @@
 $(document).ready(function(){
 	//attach a jQuery live event to the button
-//	$('#personal').ready(function(){
+	$('a[href="#personal"]').on('click', function(){
 		$.ajax({
 			type: "POST",
 			url: 'getPersonal.php',
-			async: false,
+			async: true,
 			beforeSend: function(x){
 					if(x && x.overrideMimeType){
 						x.overrideMimeType("application/j-son;charset=UTF-8");
@@ -22,5 +22,6 @@ $(document).ready(function(){
 				$('#personal #BIRTH').val(data.BIRTH);
 			}
 		});
-//	});
+	});
+	$('a[href="#personal"]').click();
 });

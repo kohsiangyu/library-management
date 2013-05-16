@@ -21,6 +21,7 @@
 		<style>
 			body{
 				padding-top: 60px;
+				background-image: url('./image/background_01.jpg');
 			}
 		</style>
 		<script src="./js/json-manage.js" type="text/javascript"></script>
@@ -71,11 +72,11 @@
 		</div>
 
 		<div class="" id="loginModal">
-			<div class="container">
+			<div class="container well" style="max-width:900px">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 				<h3>Have an Account?</h3>
 			</div>
-			<div class="container">
+			<div class="container" style="max-width:900px" >
 				<div class="well">
 				<div class="tabbable tabs-left">
 					<ul class="nav nav-tabs">
