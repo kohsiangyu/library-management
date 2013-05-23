@@ -47,10 +47,10 @@
 							<li class="">
 								<a href="./index.html">Home</a>
 							</li>
-							<li class="">
+							<li class="active">
 								<a href="./general.php">General</a>
 							</li>
-							<li class="active">
+							<li class="">
 								<a href="./manage.php">Manage</a>
 							</li>
 						</ul>
@@ -69,7 +69,8 @@
 				<div class="tabbable tabs-left">
 					<ul class="nav nav-tabs">
 						<li class="active"><a href="#personal" data-toggle="tab">Personal</a></li>
-						<li><a href="#newbook" data-toggle="tab">New Book</a></li>
+						<li><a href="#books" data-toggle="tab">Books</a></li>
+						<li><a href="#borrow" data-toggle="tab">Borrow</a></li>
 						<li><a href="logout.php">Logout</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
@@ -78,9 +79,14 @@
 						<div class="tab-pane active in" id="personal">
 						</div>
 
-						<!-- New Book
+						<!-- Books
 						=============================================================== -->
-						<div class="tab-pane fade" id="newbook">
+						<div class="tab-pane fade" id="books">
+						</div>
+
+						<!-- Borrow
+						=============================================================== -->
+						<div class="tab-pane fade" id="borrow">
 						</div>
 					</div>
 				</div>

@@ -7,7 +7,7 @@
 		$_SESSION['pass']	= $_POST['password'];
 		//unset($_POST['username']);
 		//unset($_POST['password']);
-		echo "<meta http-equiv='refresh' content='0;url=manage.php'>";
+		echo "<meta http-equiv='refresh' content='0;url=general.php'>";
 	}
 ?>
 <html>
