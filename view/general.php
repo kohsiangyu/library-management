@@ -2,6 +2,7 @@
 <?php
 	session_start();	
 	require_once("examine.php");
+	require_once("chkpass.php");
 
 	$result = examine($_SESSION['user'], $_SESSION['pass']);
 	if(isset($result)){
@@ -10,6 +11,13 @@
 	}else{
 		echo "<meta http-equiv='refresh' content='0;url=login.php'>";
 		return;
+	}
+
+	$privilege = chkpass($_SESSION['ID'], "guest") | chkpass($_SESSION['ID'], "administrator");
+	if(isset($privilege) && ($privilege == true)){
+		;
+	}else{
+		return false;
 	}
 ?>
 <html xmlns=" http://www.w3.org/1999/xhtml ">
@@ -24,7 +32,7 @@
 				background-image: url('./image/background_01.jpg');
 			}
 		</style>
-		<script src="./js/json-manage.js" type="text/javascript"></script>
+		<script src="./js/json-general.js" type="text/javascript"></script>
 
 		<!-- Todo -->
 		<title>Welcome to my library</title>
@@ -71,6 +79,7 @@
 						<li class="active"><a href="#personal" data-toggle="tab">Personal</a></li>
 						<li><a href="#books" data-toggle="tab">Books</a></li>
 						<li><a href="#borrow" data-toggle="tab">Borrow</a></li>
+						<li><a href="#return" data-toggle="tab">Return</a></li>
 						<li><a href="logout.php">Logout</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
@@ -87,6 +96,11 @@
 						<!-- Borrow
 						=============================================================== -->
 						<div class="tab-pane fade" id="borrow">
+						</div>
+
+						<!-- Return
+						=============================================================== -->
+						<div class="tab-pane fade" id="return">
 						</div>
 					</div>
 				</div>

@@ -3,7 +3,7 @@
 	require_once("create_script.php");
 
 	// Create database
-	$sql=$newtable[1];
+	$sql=$newtable[2];
 
 	if (mysqli_query($con,$sql)){
 		echo "Table users created successfully";

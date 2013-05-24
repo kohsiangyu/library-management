@@ -54,4 +54,23 @@
 		return true;
 		// echo "Mail Sent.";
 	}
+
+	function nrMail($book){ // New incoming record mail
+		$subject = "PolarLib! New books available";
+		$message = "Book ID \"$book\" is not avaliable rightnow";
+		$from = "someonelse@example.com";
+		$headers = "From:" . $from;
+		$result = getusermail();
+
+		if(isset($result) && ($result!="failure")){
+			for($i=0;$i<count($result);$i++){
+				$to = $result[$i]['EMAIL'];
+				mail($to,$subject,$message,$headers);
+			}
+		}else{
+			return false;
+		}
+		return true;
+		// echo "Mail Sent.";
+	}
 ?>

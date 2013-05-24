@@ -67,10 +67,14 @@
 
 
 	/********** Table('records') Information **********/
-	$tfName[2] = array(		""
+	$tfName[2] = array(		"BOOK_ID",
+							"USER_ID",
+							"EXPIRE"
 						);
 
-	$tfType[2] = array(		""
+	$tfType[2] = array(		"CHAR(30) PRIMARY KEY, ",
+							"CHAR(30), ",
+							"DATE"
 						);
 
 

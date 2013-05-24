@@ -2,6 +2,7 @@
 <?php
 	session_start();	
 	require_once("examine.php");
+	require_once("chkpass.php");
 
 	$result = examine($_SESSION['user'], $_SESSION['pass']);
 	if(isset($result)){
@@ -10,6 +11,13 @@
 	}else{
 		echo "<meta http-equiv='refresh' content='0;url=login.php'>";
 		return;
+	}
+
+	$privilege = chkpass($_SESSION['ID'], "administrator");
+	if(isset($privilege) && ($privilege == true)){
+		;
+	}else{
+		return false;
 	}
 ?>
 <html xmlns=" http://www.w3.org/1999/xhtml ">
