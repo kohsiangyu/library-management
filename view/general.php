@@ -79,6 +79,7 @@
 						<li class="active"><a href="#personal" data-toggle="tab">Personal</a></li>
 						<li><a href="#books" data-toggle="tab">Books</a></li>
 						<li><a href="#borrow" data-toggle="tab">Borrow</a></li>
+						<li><a href="#listborrows" data-toggle="tab">List Borrows</a></li>
 						<li><a href="#return" data-toggle="tab">Return</a></li>
 						<li><a href="logout.php">Logout</a></li>
 					</ul>
@@ -96,6 +97,11 @@
 						<!-- Borrow
 						=============================================================== -->
 						<div class="tab-pane fade" id="borrow">
+						</div>
+
+						<!-- List Borrows
+						=============================================================== -->
+						<div class="tab-pane fade" id="listborrows">
 						</div>
 
 						<!-- Return
