@@ -77,37 +77,35 @@
 				<div class="tabbable tabs-left">
 					<ul class="nav nav-tabs">
 						<li class="active"><a href="#personal" data-toggle="tab">Personal</a></li>
+						<li><a href="#searchPage" data-toggle="tab">Search</a></li>
 						<li><a href="#books" data-toggle="tab">Books</a></li>
+						<li><a href="#deletePage" data-toggle="tab">Delete</a></li>
 						<li><a href="#borrow" data-toggle="tab">Borrow</a></li>
 						<li><a href="#listborrows" data-toggle="tab">List Borrows</a></li>
 						<li><a href="#return" data-toggle="tab">Return</a></li>
 						<li><a href="logout.php">Logout</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
-						<!-- Personal Info
-						=============================================================== -->
-						<div class="tab-pane active in" id="personal">
-						</div>
+						<!-- Personal Info -->
+						<div class="tab-pane active in" id="personal"></div>
 
-						<!-- Books
-						=============================================================== -->
-						<div class="tab-pane fade" id="books">
-						</div>
+						<!-- Search -->
+						<div class="tab-pane fade" id="searchPage"></div>
 
-						<!-- Borrow
-						=============================================================== -->
-						<div class="tab-pane fade" id="borrow">
-						</div>
+						<!-- Books -->
+						<div class="tab-pane fade" id="books"></div>
 
-						<!-- List Borrows
-						=============================================================== -->
-						<div class="tab-pane fade" id="listborrows">
-						</div>
+						<!-- Delete -->
+						<div class="tab-pane fade" id="deletePage"></div>
 
-						<!-- Return
-						=============================================================== -->
-						<div class="tab-pane fade" id="return">
-						</div>
+						<!-- Borrow -->
+						<div class="tab-pane fade" id="borrow"></div>
+
+						<!-- List Borrows -->
+						<div class="tab-pane fade" id="listborrows"></div>
+
+						<!-- Return -->
+						<div class="tab-pane fade" id="return"></div>
 					</div>
 				</div>
 				</div>

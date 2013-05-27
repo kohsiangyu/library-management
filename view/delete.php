@@ -18,41 +18,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<?php require_once("skin.php"); ?>
-		<script src="./js/json-getBooks.js" type="text/javascript"></script>
+		<script src="./js/json-delete.js" type="text/javascript"></script>
 
 		<!-- Todo -->
 		<title>Welcome to my library</title>
 		
 	</head>
 	<body>
-						<!-- Books
+						<!-- New Book
 						=============================================================== -->
-							<caption><p class="text-center">目前館藏</p></caption>
-							<form class="form-horizontal" id="bookform">
+							<form class="form-horizontal" id="deleteform">
 								<fieldset>
+									<div id="legend">
+										<legend class="">Share something new ?</legend>
+									</div>
 									<div class="control-group">
 										<!-- ID -->
-										<label class="control-label"  for="PUBLISHER">PUBLISHER</label>
+										<label class="control-label"  for="ID">Book ID</label>
 										<div class="controls">
-											<select>
-												<option>1</option>
-											</select>
+											<input type="text" id="ID" name="ID" placeholder="" class="input-xlarge">
+										</div>
+									</div>
+									<div class="control-group">
+										<!-- Push Data -->
+										<div class="controls">
+											<button id="submit" name="submit" placeholder="" class="btn btn-primary">Delete</button>
 										</div>
 									</div>
 								</fieldset>
 							</form>
-							<table class="table table-striped table-condensed">
-								<thead>
-									<tr>
-										<th>#</th>
-										<th>出版社</th>
-										<th>書名</th>
-										<th>圖書編號</th>
-										<th>蒐藏日期</th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
 	</body>
 </html>
