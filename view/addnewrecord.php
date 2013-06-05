@@ -30,9 +30,9 @@
 		// var_dump($result);
 		//nbMail("kohsiangyu@gmail.com", $_POST['NAME']);
 		// alert($_POST['sendnewmail']);
-		if($_POST['sendnewrecord']=="send"){
-			nrMail($_POST['ID']);
-		}
+		//if($_POST['sendnewrecord']=="send"){
+		//	nrMail($_POST['ID']);
+		//}
 		echo json_encode("success");
 	}else{
 		// echo "Nothing found : " . mysqli_error($con);

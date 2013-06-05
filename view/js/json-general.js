@@ -4,7 +4,5 @@ $(document).ready(function(){
 	$('#searchPage').load("search.php");
 	$('#books').load("books.php");
 	$('#deletePage').load("delete.php");
-	$('#borrow').load("borrow.php");
 	$('#listborrows').load("listBorrow.php");
-	$('#return').load("return.php");
 });

@@ -27,7 +27,7 @@
 	<body>
 						<!-- Books
 						=============================================================== -->
-							<caption><p class="text-center">目前館藏</p></caption>
+							<div><caption><p class="text-center">目前館藏</p></caption></div>
 							<form class="form-horizontal" id="bookform">
 								<fieldset>
 									<div class="control-group">

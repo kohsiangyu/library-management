@@ -80,9 +80,7 @@
 						<li><a href="#searchPage" data-toggle="tab">Search</a></li>
 						<li><a href="#books" data-toggle="tab">Books</a></li>
 						<li><a href="#deletePage" data-toggle="tab">Delete</a></li>
-						<li><a href="#borrow" data-toggle="tab">Borrow</a></li>
 						<li><a href="#listborrows" data-toggle="tab">List Borrows</a></li>
-						<li><a href="#return" data-toggle="tab">Return</a></li>
 						<li><a href="logout.php">Logout</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
@@ -98,14 +96,8 @@
 						<!-- Delete -->
 						<div class="tab-pane fade" id="deletePage"></div>
 
-						<!-- Borrow -->
-						<div class="tab-pane fade" id="borrow"></div>
-
 						<!-- List Borrows -->
 						<div class="tab-pane fade" id="listborrows"></div>
-
-						<!-- Return -->
-						<div class="tab-pane fade" id="return"></div>
 					</div>
 				</div>
 				</div>
