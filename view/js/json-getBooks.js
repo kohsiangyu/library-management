@@ -31,8 +31,10 @@ $(document).ready(function(){
 							"<td>"+data[i].NAME+"</td>"+
 							"<td class='identifier'>"+data[i].ID+"</td>"+
 							"<td>"+data[i].STOCKDATE+"</td>"+
-							"<td><button class='btn btn-mini btn-warning' type='button'>Borrow</button></td>"+
-							"<td><button class='btn btn-mini btn-danger' type='button'>Delete</button></td>"+
+							"<td>"+
+							"<button class='btn btn-mini btn-warning' type='button'>Borrow</button> "+
+							"<button class='btn btn-mini btn-danger' type='button'>Delete</button> "+
+							"</td>"+
 							"</tr>";
 					$('#books tbody').append(text);
 				}
@@ -75,7 +77,6 @@ $(document).ready(function(){
 							}
 						});
 					}else if($(this).text() == "Delete"){
-						alert($(this).text());
 						$.ajax({
 							type: "POST",
 							url: 'getDelete.php',
@@ -111,6 +112,7 @@ $(document).ready(function(){
 								}
 							}
 						});
+						$('a[href=#books]').click();
 					}else{
 						alert($(this).text());
 					}

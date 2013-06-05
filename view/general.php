@@ -79,7 +79,6 @@
 						<li class="active"><a href="#personal" data-toggle="tab">Personal</a></li>
 						<li><a href="#searchPage" data-toggle="tab">Search</a></li>
 						<li><a href="#books" data-toggle="tab">Books</a></li>
-						<li><a href="#deletePage" data-toggle="tab">Delete</a></li>
 						<li><a href="#listborrows" data-toggle="tab">List Borrows</a></li>
 						<li><a href="logout.php">Logout</a></li>
 					</ul>
@@ -92,9 +91,6 @@
 
 						<!-- Books -->
 						<div class="tab-pane fade" id="books"></div>
-
-						<!-- Delete -->
-						<div class="tab-pane fade" id="deletePage"></div>
 
 						<!-- List Borrows -->
 						<div class="tab-pane fade" id="listborrows"></div>
