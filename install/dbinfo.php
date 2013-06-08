@@ -9,7 +9,7 @@
 	$tablename[0]	= "users";
 	$tablename[1]	= "books";
 	$tablename[2]	= "records";
-
+	$tablename[3]	= "WebsToRead";
 
 	/**********  Table('users') Information  **********/
 	// Table Field Name

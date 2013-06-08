@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-	session_start();
+	session_start(86400);
 
 	if(isset($_POST['username']) && isset($_POST['password'])){
 		$_SESSION['user']	= $_POST['username'];

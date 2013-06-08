@@ -31,6 +31,26 @@
 				padding-top: 60px;
 				background-image: url('./image/background_01.jpg');
 			}
+
+			tr{
+				overflow	: hidden;
+				white-space	: nowrap;
+				text-overflow : ellipsis;
+			}
+
+			tr > .third {
+				max-width	: 15em;
+				overflow	: hidden;
+				white-space	: nowrap;
+				text-overflow : ellipsis;
+			}
+
+			tr > .fourth {
+				max-width	: 15em;
+				overflow	: hidden;
+				white-space	: nowrap;
+				text-overflow : ellipsis;
+			}
 		</style>
 		<script src="./js/json-manage.js" type="text/javascript"></script>
 
@@ -78,6 +98,8 @@
 					<ul class="nav nav-tabs">
 						<li class="active"><a href="#personal" data-toggle="tab">Personal</a></li>
 						<li><a href="#newbook" data-toggle="tab">New Book</a></li>
+						<li><a href="#AddWebToReadPage" data-toggle="tab">Add pending</a></li>
+						<li><a href="#WebsToReadPage" data-toggle="tab">Pending Page</a></li>
 						<li><a href="logout.php">Logout</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
@@ -89,6 +111,16 @@
 						<!-- New Book
 						=============================================================== -->
 						<div class="tab-pane fade" id="newbook">
+						</div>
+
+						<!-- Add Web Pending To Read
+						=============================================================== -->
+						<div class="tab-pane fade" id="AddWebToReadPage">
+						</div>
+
+						<!-- Webs Pending To Read
+						=============================================================== -->
+						<div class="tab-pane fade" id="WebsToReadPage">
 						</div>
 					</div>
 				</div>
