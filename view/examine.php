@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once("connect.php");
 
 	function examine($user, $pass){
@@ -27,5 +28,16 @@
 		mysqli_close($con);
 
 		return $row;
+	}
+
+	function chkAccessibility($redirectPage = "login.php"){
+		$result = examine($_SESSION['user'], $_SESSION['pass']);
+		if(isset($result)){
+			$_SESSION['ID'] = $result['ID'];
+			unset($result);
+		}else{
+			echo "<meta http-equiv='refresh' content='0;url=$redirectPage'>";
+			return;
+		}
 	}
 ?>

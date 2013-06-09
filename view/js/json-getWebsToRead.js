@@ -24,12 +24,12 @@ $(document).ready(function(){
 				// $('#personal #ID').val(data.ID);
 				$('#WebsToReadPage tbody').html("");
 
-				for(i=0;i<data.length;i++){
+				for(i=0;i<data.data.length;i++){
 					text = "<tr>"+
 							"<td><span class='badge'>"+(i+1)+"</span></td>"+
-							"<td class='second'><span class='label label-info'>"+data[i].date+"</span></td>"+
-							"<td class='third'>"+data[i].description+"</td>"+
-							"<td class='fourth'><a href='"+data[i].url+"' target='_blank'>"+data[i].url+"</a></td>"+
+							"<td class='second'><span class='label label-info'>"+data.data[i].date+"</span></td>"+
+							"<td class='third'>"+data.data[i].description+"</td>"+
+							"<td class='fourth'><a href='"+data.data[i].url+"' target='_blank'>"+data.data[i].url+"</a></td>"+
 							"<td>"+
 							"<button class='btn btn-mini btn-danger' type='button'>Delete</button> "+
 							"</td>"+
