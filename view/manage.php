@@ -88,10 +88,6 @@
 		</div>
 
 		<div class="" id="loginModal">
-			<div class="container well" style="max-width:900px">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<h3>Have an Account?</h3>
-			</div>
 			<div class="container" style="max-width:900px" >
 				<div class="well">
 				<div class="tabbable tabs-left">

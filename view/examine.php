@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	require_once("connect.php");
 
 	function examine($user, $pass){
@@ -31,6 +30,7 @@
 	}
 
 	function chkAccessibility($redirectPage = "login.php"){
+		session_start();
 		$result = examine($_SESSION['user'], $_SESSION['pass']);
 		if(isset($result)){
 			$_SESSION['ID'] = $result['ID'];
@@ -40,5 +40,6 @@
 			echo "<meta http-equiv='refresh' content='0;url=$redirectPage'>";
 			return false;
 		}
+		session_write_close();
 	}
 ?>

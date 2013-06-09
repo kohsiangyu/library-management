@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 		$.ajax({
 			type: "POST",
-			url: 'getWebsToRead.php',
+			url: 'action.php',
 			async: true,
 			beforeSend: function(x){
 					if(x && x.overrideMimeType){
@@ -19,6 +19,7 @@ $(document).ready(function(){
 					}
 			},
 			dataType: "json",
+			data		: {"action":"getWebsToRead"},
 			success: function(data){
 				// alert(data[0].NAME); //uncomment this for debug
 				// $('#personal #ID').val(data.ID);

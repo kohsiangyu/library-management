@@ -5,17 +5,29 @@
 
 	require_once("connect.php");
 
-	function retrieve($usage, $argv, $type = "sqli"){
+	function retrieve($usage, $argv = array(), $type = "sqli"){
 		global $tablename;
 
-		if($usage == "getWebsToRead"){
-			$sql = "select * from $tablename[3] order by date desc";
-		}else if($usage == "getBooks"){
-			$sql = "select ID, NAME, PUBLISHER, STOCKDATE from $tablename[1]";
-		}else if($usage == "getBooksByCategory"){
-			$publisher = "\"".$argv['publisher']."\"";
-			$sql = "select ID, NAME, PUBLISHER, STOCKDATE from $tablename[1]".
-					" where PUBLISHER=$publisher";
+		switch($usage){
+			case "getWebsToRead":
+				$sql = "select * from $tablename[3] order by date desc";
+				break;
+			case "getBooks":
+				$sql = "select ID, NAME, PUBLISHER, STOCKDATE from $tablename[1]";
+				break;
+			case "getBooksByCategory":
+				$publisher = "\"".$argv['publisher']."\"";
+				$sql = "select ID, NAME, PUBLISHER, STOCKDATE from $tablename[1]".
+						" where PUBLISHER=$publisher";
+				break;
+			case "getPersonalInfo":
+				$userID = "\"".$argv['userID']."\"";
+				$sql="select * from users where ID=$userID";
+				break;
+			case "getBorrows":
+				$userID = "\"".$argv['userID']."\"";
+				$sql="select BOOK_ID, EXPIRE from $tablename[2] where USER_ID=$userID";
+				break;
 		}
 
 		retrieveSQLI($sql);

@@ -10,15 +10,16 @@ $(document).ready(function(){
 		$('#books select').append(text);
 
 		$.ajax({
-			type: "POST",
-			url: 'getBooks.php',
-			async: true,
-			beforeSend: function(x){
+			type	: "POST",
+			url		: 'action.php',
+			async	: true,
+			beforeSend	: function(x){
 					if(x && x.overrideMimeType){
 						x.overrideMimeType("application/j-son;charset=UTF-8");
 					}
 			},
-			dataType: "json",
+			dataType	: "json",
+			data		: {"action":"getBooks"},
 			success: function(data){
 				// alert(data[0].NAME); //uncomment this for debug
 				// $('#personal #ID').val(data.ID);
@@ -40,7 +41,7 @@ $(document).ready(function(){
 				}
 				$('#books button').on('click', function(){
 					if($(this).text() == "Borrow"){
-						alert("Borrow Submit");
+						//alert("Borrow Submit");
 						$.ajax({
 							type: "POST",
 							url: 'addnewrecord.php',

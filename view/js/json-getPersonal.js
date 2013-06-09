@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('a[href="#personal"]').on('click', function(){
 		$.ajax({
 			type: "POST",
-			url: 'getPersonal.php',
+			url: 'action.php',
 			async: true,
 			beforeSend: function(x){
 					if(x && x.overrideMimeType){
@@ -11,15 +11,16 @@ $(document).ready(function(){
 					}
 			},
 			dataType: "json",
+			data		: {"action":"getPersonalInfo"},
 			success: function(data){
 				//alert(data); //uncomment this for debug
-				$('#personal #ID').val(data.ID);
-				$('#personal #TYPE').val(data.TYPE);
-				$('#personal #STUDENT_ID').val(data.STUDENT_ID);
-				$('#personal #SOCIAL_ID').val(data.SOCIAL_ID);
-				$('#personal #NAME').val(data.NAME);
-				$('#personal #EMAIL').val(data.EMAIL);
-				$('#personal #BIRTH').val(data.BIRTH);
+				$('#personal #ID').val(data.data[0].ID);
+				$('#personal #TYPE').val(data.data[0].TYPE);
+				$('#personal #STUDENT_ID').val(data.data[0].STUDENT_ID);
+				$('#personal #SOCIAL_ID').val(data.data[0].SOCIAL_ID);
+				$('#personal #NAME').val(data.data[0].NAME);
+				$('#personal #EMAIL').val(data.data[0].EMAIL);
+				$('#personal #BIRTH').val(data.data[0].BIRTH);
 			}
 		});
 	});
