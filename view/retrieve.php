@@ -5,11 +5,17 @@
 
 	require_once("connect.php");
 
-	function retrieve($usage, $type = "sqli"){
+	function retrieve($usage, $argv, $type = "sqli"){
 		global $tablename;
 
 		if($usage == "getWebsToRead"){
-			$sql="select * from $tablename[3] order by date desc";
+			$sql = "select * from $tablename[3] order by date desc";
+		}else if($usage == "getBooks"){
+			$sql = "select ID, NAME, PUBLISHER, STOCKDATE from $tablename[1]";
+		}else if($usage == "getBooksByCategory"){
+			$publisher = "\"".$argv['publisher']."\"";
+			$sql = "select ID, NAME, PUBLISHER, STOCKDATE from $tablename[1]".
+					" where PUBLISHER=$publisher";
 		}
 
 		retrieveSQLI($sql);

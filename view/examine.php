@@ -35,9 +35,10 @@
 		if(isset($result)){
 			$_SESSION['ID'] = $result['ID'];
 			unset($result);
+			return true;
 		}else{
 			echo "<meta http-equiv='refresh' content='0;url=$redirectPage'>";
-			return;
+			return false;
 		}
 	}
 ?>

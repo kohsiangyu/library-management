@@ -24,13 +24,13 @@ $(document).ready(function(){
 				// $('#personal #ID').val(data.ID);
 				$('#books tbody').html("");
 
-				for(i=0;i<data.length;i++){
+				for(i=0;i<data.data.length;i++){
 					text = "<tr>"+
 							"<td><span class='badge'>"+(i+1)+"</span></td>"+
-							"<td><span class='label label-info'>"+data[i].PUBLISHER +"</span></td>"+
-							"<td>"+data[i].NAME+"</td>"+
-							"<td class='identifier'>"+data[i].ID+"</td>"+
-							"<td>"+data[i].STOCKDATE+"</td>"+
+							"<td><span class='label label-info'>"+data.data[i].PUBLISHER +"</span></td>"+
+							"<td>"+data.data[i].NAME+"</td>"+
+							"<td class='identifier'>"+data.data[i].ID+"</td>"+
+							"<td>"+data.data[i].STOCKDATE+"</td>"+
 							"<td>"+
 							"<button class='btn btn-mini btn-warning' type='button'>Borrow</button> "+
 							"<button class='btn btn-mini btn-danger' type='button'>Delete</button> "+
@@ -138,13 +138,13 @@ $(document).ready(function(){
 				// $('#personal #ID').val(data.ID);
 				$('#books tbody').html("");
 
-				for(i=0;i<data.length;i++){
+				for(i=0;i<data.data.length;i++){
 					text = "<tr>"+
 							"<td><span class='badge'>"+(i+1)+"</span></td>"+
-							"<td><span class='label label-info'>"+data[i].PUBLISHER +"</span></td>"+
-							"<td>"+data[i].NAME+"</td>"+
-							"<td>"+data[i].ID+"</td>"+
-							"<td>"+data[i].STOCKDATE+"</td>"+
+							"<td><span class='label label-info'>"+data.data[i].PUBLISHER +"</span></td>"+
+							"<td>"+data.data[i].NAME+"</td>"+
+							"<td>"+data.data[i].ID+"</td>"+
+							"<td>"+data.data[i].STOCKDATE+"</td>"+
 							"</tr>";
 					$('#books tbody').append(text);
 				}
