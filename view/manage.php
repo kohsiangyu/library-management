@@ -52,7 +52,7 @@
 				text-overflow : ellipsis;
 			}
 		</style>
-		<script src="./js/json-manage.js" type="text/javascript"></script>
+		<script src="./js/manage.js" type="text/javascript"></script>
 
 		<!-- Todo -->
 		<title>Welcome to my library</title>

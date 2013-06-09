@@ -44,19 +44,20 @@ $(document).ready(function(){
 						//alert("Borrow Submit");
 						$.ajax({
 							type: "POST",
-							url: 'addnewrecord.php',
+							url: 'action.php',
 							async: true,
 							beforeSend: function(x){
 									if(x && x.overrideMimeType){
 										x.overrideMimeType("application/j-son;charset=UTF-8");
 									}
 								},
-							data     : {"ID":$(this).parent().parent().children('.identifier').text()},
+							data     : {"ID":$(this).parent().parent().children('.identifier').text(),
+										"action":"addNewRecord"},
 							dataType: "json",
 							success: function(data){
 								// console.log(data);
 								// alert(data); //uncomment this for debug
-								if(data == "success"){
+								if(data['status'] == "success"){
 									$('#books table').before(
 										'<div class="alert alert-success span6">'+
 										'<button type="button" class="close" data-dismiss="alert">&times;</button>'+
@@ -64,7 +65,7 @@ $(document).ready(function(){
 										'  Your book is now avaliable in the PolorLib'+
 										'</div>'
 									);
-								}else if(data == "failure"){
+								}else if(data['status'] == "fail"){
 									$('#books table').before(
 										'<div class="alert alert-error span6">'+
 										'<button type="button" class="close" data-dismiss="alert">&times;</button>'+
@@ -125,14 +126,14 @@ $(document).ready(function(){
 	$('#books select').on('change', function(){
 		$.ajax({
 			type: "POST",
-			url: 'getCatBooks.php',
+			url: 'action.php',
 			async: true,
 			beforeSend: function(x){
 					if(x && x.overrideMimeType){
 						x.overrideMimeType("application/j-son;charset=UTF-8");
 					}
 			},
-			data     : {"PUBLISHER":$(this).val()},
+			data     : {"PUBLISHER":$(this).val(), "action":"getBooksByCategory"},
 			dataType: "json",
 			success: function(data){
 				// alert(data[0].NAME); //uncomment this for debug

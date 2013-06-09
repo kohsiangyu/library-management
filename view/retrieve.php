@@ -28,6 +28,10 @@
 				$userID = "\"".$argv['userID']."\"";
 				$sql="select BOOK_ID, EXPIRE from $tablename[2] where USER_ID=$userID";
 				break;
+			case "getSearch":
+				$bookName = "\"".$argv['bookName']."\"";
+				$sql="select * from ".$tablename[1]." where NAME=$bookName";
+				break;
 		}
 
 		retrieveSQLI($sql);

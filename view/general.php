@@ -32,7 +32,7 @@
 				background-image: url('./image/background_01.jpg');
 			}
 		</style>
-		<script src="./js/json-general.js" type="text/javascript"></script>
+		<script src="./js/general.js" type="text/javascript"></script>
 
 		<!-- Todo -->
 		<title>Welcome to my library</title>

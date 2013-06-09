@@ -30,7 +30,7 @@
 	}
 
 	function chkAccessibility($redirectPage = "login.php"){
-		session_start();
+		if (!isset($_SESSION)) session_start();
 		$result = examine($_SESSION['user'], $_SESSION['pass']);
 		if(isset($result)){
 			$_SESSION['ID'] = $result['ID'];

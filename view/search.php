@@ -63,6 +63,7 @@
 									<div class="control-group">
 										<!-- Push Data -->
 										<div class="controls">
+											<input type="hidden" id="action" name="action" value="getSearch">
 											<button id="submit" name="submit" placeholder="" class="btn btn-primary">Search</button>
 										</div>
 									</div>

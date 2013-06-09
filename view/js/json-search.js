@@ -4,7 +4,7 @@ $(document).ready(function(){
 		// alert("test");
 		$.ajax({
 			type: "POST",
-			url: 'getSearch.php',
+			url: 'action.php',
 			async: true,
 			beforeSend: function(x){
 					if(x && x.overrideMimeType){
@@ -16,10 +16,10 @@ $(document).ready(function(){
 			success: function(data){
 				// console.log(data);
 				// alert(data.ID); //uncomment this for debug
-				$('#searchform #ID').val(data.ID);
-				$('#searchform #NAME').val(data.NAME);
-				$('#searchform #PUBLISHER').val(data.PUBLISHER);
-				$('#searchform #STOCKDATE').val(data.STOCKDATE);
+				$('#searchform #ID').val(data.data[0].ID);
+				$('#searchform #NAME').val(data.data[0].NAME);
+				$('#searchform #PUBLISHER').val(data.data[0].PUBLISHER);
+				$('#searchform #STOCKDATE').val(data.data[0].STOCKDATE);
 			}
 		});
 

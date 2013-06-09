@@ -4,7 +4,7 @@ $(document).ready(function(){
 		// alert("test");
 		$.ajax({
 			type: "POST",
-			url: 'addWebToRead.php',
+			url: 'action.php',
 			async: true,
 			beforeSend: function(x){
 					if(x && x.overrideMimeType){
@@ -16,7 +16,7 @@ $(document).ready(function(){
 			success: function(data){
 				// console.log(data);
 				// alert(data); //uncomment this for debug
-				if(data == "success"){
+				if(data['status'] == "success"){
 					$('#AddWebToReadForm').after(
 						'<div class="alert alert-success span6">'+
 						'<button type="button" class="close" data-dismiss="alert">&times;</button>'+
@@ -26,7 +26,7 @@ $(document).ready(function(){
 					);
 					$('#AddWebToReadForm #url').val("");
 					$('#AddWebToReadForm #description').val("");
-				}else if(data == "failure"){
+				}else if(data['status'] == "fail"){
 					$('#AddWebToReadForm').after(
 						'<div class="alert alert-error span6">'+
 						'<button type="button" class="close" data-dismiss="alert">&times;</button>'+
