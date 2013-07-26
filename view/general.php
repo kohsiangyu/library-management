@@ -33,6 +33,7 @@
 			}
 		</style>
 		<script src="./js/general.js" type="text/javascript"></script>
+		<script src="./js/header.js" type="text/javascript"></script>
 
 		<!-- Todo -->
 		<title>Welcome to my library</title>
