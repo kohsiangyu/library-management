@@ -1,8 +1,8 @@
 <?php
 	/**********     Database Information     **********/
 	$dbserver		= "localhost";
-	$dbadmin		= "libmanager";
-	$dbpasswd		= "pFJpjtbc7FWFaAYn";
+	$dbadmin		= "root";
+	$dbpasswd		= "f206@nsysu";
 	$dbname			= "libmanage";
 
 	/**********      Table Informations      **********/
